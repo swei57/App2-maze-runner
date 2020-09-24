@@ -14,6 +14,7 @@ public class Restart : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.T)){
             PlayerPrefs.SetString("setDisplay", "leaderboard");
             submitDisplay.SetActive(true);
+            // SceneManager.LoadScene("Menu");
         }
         if(Input.GetKeyDown(KeyCode.Q)){
             PlayerPrefs.SetString("setDisplay", "mainMenu");

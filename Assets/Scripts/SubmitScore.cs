@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SubmitScore : MonoBehaviour
 {
@@ -16,5 +17,6 @@ public class SubmitScore : MonoBehaviour
     void SetPlayerName(){
         Debug.Log(playerName.text);
         PlayerPrefs.SetString("setName", playerName.text);
+        SceneManager.LoadScene("Menu");
     }
 }
