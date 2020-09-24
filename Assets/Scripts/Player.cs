@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 	public float dirSpeed = 60.0f;
 	private Vector3 moveDir = Vector3.zero;
 	public float gravity = 20.0f;
+    public GameObject escapeMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,9 @@ public class Player : MonoBehaviour
         if(!Input.anyKey){
             animator.SetInteger("AniParam", 0);
         }
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            escapeMenu.SetActive(!escapeMenu.activeSelf);
+        }   
 
         if(controller.isGrounded){
 			moveDir = transform.forward * Input.GetAxis("Vertical") * speed;
